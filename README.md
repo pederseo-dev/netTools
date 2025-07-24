@@ -34,3 +34,20 @@ hyperswarm
 
     |-unslab
         |-b4a
+
+
+
+
+[ Tu App P2P (ej: chat, carpeta compartida, etc.) ]
+                  ↓
+[ Hyperswarm ] - "Me uno a una sala (topic hash)"
+                  ↓
+[ HyperDHT ] - Crea conexiones P2P seguras (NOISE), hace hole punching si hace falta
+                  ↓
+[ dht-rpc ] - Implementa el ruteo Kademlia, mantiene la red distribuida
+                  ↓
+[ k-bucket ] - Administra la tabla de nodos más cercanos (por XOR distance)
+                  ↓
+[ UDP Socket (dgram) ] - Envía/recibe paquetes binarios a través de la red
+                  ↓
+[ Sistema operativo ] - Maneja red física, NAT, puertos, sockets
